@@ -2,8 +2,17 @@ package com.knight.estoque.modelos;
 
 import java.util.List;
 
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlAccessType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Livro {
     private Integer anoDePublicacao;
+
+    @XmlElementWrapper(name="autores")
+    @XmlElement(name="autor")
     private List<String> autores;
     private String editora;
     private String nome;
