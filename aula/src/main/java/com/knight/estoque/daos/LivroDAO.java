@@ -40,4 +40,8 @@ public class LivroDAO {
         return livros.subList(indiceInicial, indiceFinal);
     }
 
+    public void criarLivro(Livro livro) {
+        livros.add(livro);
+    }
+
 }
